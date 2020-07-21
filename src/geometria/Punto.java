@@ -26,12 +26,13 @@ public class Punto{
         int dy = this.y - pto.getY();
         return Math.sqrt(dx*dx+dy*dy);
     }
-    
-    public Punto rotar(int alfa){
-        alfa%=360;
-        int nx = (int)(Math.round(Math.cos(alfa)*this.x-Math.sin(alfa)*this.y));
-        int ny = (int)(Math.round(Math.sin(alfa)*this.x+Math.cos(alfa)*this.y));
-        return new Punto(nx,ny);
+
+    public Punto rotar(int alfa) {
+        alfa %= 360;
+        System.out.println(Math.round(Math.cos(alfa)));
+        int nx = (int) ((Math.round(Math.cos(alfa))) * this.x - (Math.round(Math.sin(alfa))) * this.y);
+        int ny = (int) ((Math.round(Math.sin(alfa))) * this.x + (Math.round(Math.cos(alfa))) * this.y);
+        return new Punto(nx, ny);
     }
     
     public Punto puntoEntre(Punto p, double razon){

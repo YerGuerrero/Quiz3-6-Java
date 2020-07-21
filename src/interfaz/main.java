@@ -91,6 +91,17 @@ public class   main {
                 triangulo.getBisectriz('b');
                 triangulo.getBisectriz('c');
             }
+
+            frame.getContentPane().removeAll();
+            frame.revalidate();
+            frame.repaint();
+            frame.add(new showTexture(triangulo.getA().getX(), triangulo.getA().getY(), triangulo.getB().getX(),triangulo.getB().getY(), triangulo.getC().getX(), triangulo.getC().getY(),textura));
+            frame.add(new showLine(triangulo.getBisectriz('a').getM(),triangulo.getBisectriz('a').getB()));
+            frame.add(new showLine(triangulo.getBisectriz('b').getM(),triangulo.getBisectriz('b').getB()));
+            frame.add(new showLine(triangulo.getBisectriz('c').getM(),triangulo.getBisectriz('c').getB()));
+            frame.pack();
+            frame.setVisible(true);
+
             System.out.println(triangulo.getBisectriz('a').getM() + "," + triangulo.getBisectriz('a').getB());
             System.out.println(triangulo.getBisectriz('b').getM() + "," + triangulo.getBisectriz('b').getB());
             System.out.println(triangulo.getBisectriz('c').getM() + "," + triangulo.getBisectriz('c').getB());
