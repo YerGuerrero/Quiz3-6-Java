@@ -24,7 +24,7 @@ public class Punto{
     public double distanciaCon(Punto pto){
         int dx = this.x - pto.getX();
         int dy = this.y - pto.getY();
-        return Math.sqrt(dx*dx+dy*dy);
+        return (Math.sqrt( Math.pow(this.x-pto.getX(), 2)+Math.pow(this.y-pto.getY(), 2)));
     }
 
     public Punto rotar(int alfa) {

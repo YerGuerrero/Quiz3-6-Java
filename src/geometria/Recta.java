@@ -11,8 +11,8 @@ public class Recta{
     }
     
     public Recta(Punto a, Punto b){
-        this.m = (a.getY()-b.getY())*1.0/(a.getX()-b.getX());
-        this.b = a.getX()*this.m*-1.0;
+        this.m = (b.getY()-a.getY())*1.0/(b.getX()-a.getX());
+        this.b = a.getY()-this.m*a.getX();
     }
     
     public Recta(Punto a){

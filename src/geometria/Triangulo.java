@@ -2,6 +2,7 @@ package geometria;
 
 import aritmetica.Fraccion;
 import java.awt.Polygon;
+import java.awt.desktop.SystemSleepEvent;
 
 public class Triangulo extends Polygon{
     private Punto A;
